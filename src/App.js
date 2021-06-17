@@ -19,22 +19,29 @@ function App() {
   // let q = slideImg.slice(0, slideImg.length-1);
   // let d = slideImg.slice(-slideImg.length+1);
 
-  console.log("1", ...(slideImg.slice(0, slideImg.length-1)), (slideImg[slideImg.length-1]));
+  console.log("1", (slideImg[slideImg.length-1]), ...(slideImg.slice(0, slideImg.length-1)) );
   console.log("2", ...(slideImg.slice((-slideImg.length+1))), (slideImg[0]));
 
-  function cLog(v) {
+  function prevSlide() {
     
-    if( v === 'previous' ) {setSlide(...(slideImg.slice(0, slideImg.length-1)), (slideImg[slideImg.length]))} 
-    else {setSlide(...(slideImg.slice((-slideImg.length+1))), (slideImg[0]))} 
-  }
+    setSlide(
+      [(slideImg[slideImg.length-1]), ...(slideImg.slice(0, slideImg.length-1))]
+     
+     )}
+
+     function nextSlide() {
+      setSlide(      
+      [...(slideImg.slice(-slideImg.length+1)), (slideImg[0])]  
+       
+       )}
 
   return (
 
     <div className="container">
-        <ButtonPrew f = {cLog}/>
+        <ButtonPrew f = {prevSlide}/>
             <WindowSlide slide = {slideImg}>            
             </WindowSlide> 
-        <ButtonNext f = {cLog}/>
+        <ButtonNext f = {nextSlide}/>
      </div>
     
   );

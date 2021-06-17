@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function NextSlide(props){
+    console.log(props, "from nextSlide");
     const styles = {
         img: {
             marginLeft: "250px",
