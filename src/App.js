@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="container">
       <ButtonPrew f={prevSlide} />
-      <WindowSlide slide={slideImg}></WindowSlide>
+      <WindowSlide></WindowSlide>
       <ButtonNext f={nextSlide} />
     </div>
   );

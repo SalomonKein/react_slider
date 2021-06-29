@@ -1,0 +1,3 @@
+export const PREV_SLIDE = 'SLIDER/PREV_SLIDE'
+export const NEXT_SLIDE = 'SLIDER/NEXT_SLIDE'
+export const VIEW_SLIDE = 'SLIDER/VIEW_SLIDE'
